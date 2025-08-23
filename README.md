@@ -127,9 +127,6 @@ Add:
 spring.datasource.url=jdbc:mysql://<DB-PRIVATE-IP>:3306/petclinic
 spring.datasource.username=petclinic
 spring.datasource.password=shubham123
-
-# JPA configuration
-spring.jpa.hibernate.ddl-auto=update
 ```
 
 Build JAR:
@@ -189,6 +186,8 @@ server {
 Test & reload:
 
 ``` bash
+sudo rm /etc/nginx/sites-enabled/default
+sudo ln -s /etc/nginx/sites-available/default /etc/nginx/sites-enabled/
 sudo nginx -t
 sudo systemctl reload nginx
 ```
